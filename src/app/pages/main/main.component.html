@@ -1,0 +1,21 @@
+<div class="main_component">
+    <h1>Üdvözöljük a WaterPoloInfo oldalán!</h1>
+</div>
+
+<div class="introduction">
+    <h2>Itt tájékozódhat a csapatokról, játékosokról. 
+        <br>
+        Ezek mellett folymatosan frissülő képgaléria is található a bajnokságról. 
+        <br>
+        Elérhetőségünket a Kapcsolat menüpontban találja.
+    </h2>
+</div>
+
+<div class="team-introduction">
+    <h2><u>Csapatok</u></h2>
+
+    <div class="div-team" *ngFor="let team of teams">
+        <h3><u>{{ team.team_name }}</u></h3>
+        <p *ngFor="let player of playersByTeam[team.id]">{{ player }}</p>
+    </div>
+</div>

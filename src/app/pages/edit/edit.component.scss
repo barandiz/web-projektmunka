@@ -1,0 +1,29 @@
+.main_component {
+    align-items: center;
+}
+
+mat-form-field{
+    width: 50%;
+}
+
+.div-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+
+mat-card{
+    width: 50%;
+    margin: 1rem;
+    padding: 1rem;
+    align-self: center;
+}
+
+mat-card-title, mat-card-subtitle{
+    padding: 10px;
+}
+
+

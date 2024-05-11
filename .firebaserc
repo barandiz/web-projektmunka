@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "waterpoloinfo-webfejl": {
+      "hosting": {
+        "waterpolo": [
+          "waterpoloinfo-webfejl"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "waterpoloinfo-webfejl"
+  }
+}

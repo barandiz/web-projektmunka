@@ -1,0 +1,41 @@
+mat-card{
+    width: 60%;
+    margin: 1rem 0;
+}
+
+mat-card:nth-child(even) {
+    background-color: #3D5AFE;
+}
+
+mat-card:nth-child(even) mat-card-header mat-card-title, 
+mat-card:nth-child(even) mat-card-header mat-card-subtitle{
+    color: white;
+}
+
+
+
+mat-card img {
+    width: 100%;
+    padding-top: 1rem;
+    margin: 0;
+ 
+}
+
+.container{
+    padding: 10px;
+}
+
+.div-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 80%;
+}
+
+
+
+
+
+
+  

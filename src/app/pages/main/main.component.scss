@@ -1,0 +1,36 @@
+div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+.main_component{
+    height: 50vh;
+}
+
+.div-team {
+    margin-bottom: 3rem; 
+}
+
+.introduction{
+    height: 50vh;
+}
+
+.introduction h2{
+    padding: 1rem 2rem;
+}
+
+.team-introduction{
+    padding-top: 2rem;
+    color: white;
+    //background-color: #4FC3F7;
+    background-color: #536DFE;
+    background-color: #3D5AFE;
+}
+
+
+
+
+

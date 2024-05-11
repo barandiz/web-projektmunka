@@ -1,0 +1,21 @@
+<!--<div *ngIf="user">
+    <h2>Welcome, {{ user.name.firstname }} {{ user.name.lastname }}!</h2>
+    <p>Email: {{ user.email }}</p>
+    <p>Username: {{ user.username }}</p>
+    <p>User Type: {{ user.editorOrPlayer }}</p>
+</div>
+-->
+
+<div *ngIf="user" class="main_component div-flex">
+    <mat-card class="div-flex bg-color">
+        <mat-card-header>
+            <mat-card-title>Welcome, {{ user.name.firstname }} {{ user.name.lastname }}!</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+            <h3><span>Email:</span> {{ user.email }}</h3>
+            <h3><span>Username:</span> {{ user.username }}</h3>
+            <h3><span>User Type:</span> {{ user.editorOrPlayer }}</h3>
+        </mat-card-content>
+    </mat-card>
+</div>

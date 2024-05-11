@@ -1,0 +1,27 @@
+mat-card {
+    width: 80%;
+    height: 80%;
+    align-self: center;
+}
+
+mat-card-header {
+    //alapból flex lenne, így lesz középen
+    display: initial;
+}
+
+.div-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 80%;
+}
+
+.main_component {
+    height: 100vh;
+}
+
+.bg-color{
+    background-color: #3D5AFE;
+    color: white;
+}

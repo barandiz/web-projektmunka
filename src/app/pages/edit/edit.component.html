@@ -1,0 +1,107 @@
+<div class="main_component div-flex">
+    <mat-card class="div-flex">
+        <mat-card-title>Csapat létrehozása</mat-card-title>
+    
+        <mat-form-field>
+            <mat-label for="team">Új csapat neve</mat-label>
+            <input matInput type="text" [formControl]="teamFormControl">
+        </mat-form-field>
+    
+        <span>
+            <button mat-raised-button color="primary" (click)="createTeam()">Create</button>
+        </span>
+    </mat-card>
+    
+    <mat-card class=" div-flex" >
+        <mat-card-title>Csapat törlése</mat-card-title>
+    
+        <mat-form-field>
+            <mat-label>Csapatok</mat-label>
+            <mat-select matNativeControl [(value)]="selectedTeamIdToDelete">
+                <mat-option *ngFor="let team of teams" [value]="team.id">{{ team.team_name }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    
+        <span>
+            <button mat-raised-button color="primary" (click)="deleteTeam()">Delete</button>
+        </span>
+    </mat-card>
+    
+    <mat-card class=" div-flex" >
+        <mat-card-title>Játékos hozzáadása a csapathoz</mat-card-title>
+    
+        <mat-form-field>
+            <mat-label>Csapatok</mat-label>
+            <mat-select matNativeControl [(value)]="selectedTeamId">
+                <mat-option *ngFor="let team of teams" [value]="team.id">{{ team.team_name }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-card-subtitle>You selected teamId: {{selectedTeamId}}</mat-card-subtitle>
+    
+    
+        <mat-form-field>
+            <mat-label>Játékosok</mat-label>
+            <mat-select matNativeControl [(value)]="selectedPlayerId">
+                <mat-option *ngFor="let player of players" [value]="player.id">{{ player.username }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        
+        <mat-card-subtitle>You selected playerId: {{selectedPlayerId}}</mat-card-subtitle>
+        <span>
+            <button mat-raised-button color="primary" (click)="setPlayerToTeam()">Add</button>
+        </span>
+    </mat-card>
+    
+    <mat-card class=" div-flex" >
+        <mat-card-title>Csapat nevének megváltoztatása</mat-card-title>
+    
+        <mat-form-field>
+            <mat-label>Csapatok</mat-label>
+            <mat-select matNativeControl [(value)]="selectedTeamIdToRename">
+                <mat-option *ngFor="let team of teams" [value]="team.id">{{ team.team_name }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-card-subtitle>You selected teamId: {{selectedTeamIdToRename}}</mat-card-subtitle>
+    
+    
+        <mat-form-field>
+            <mat-label for="team">Új csapat neve</mat-label>
+            <input matInput type="text" [formControl]="newTeamnameFormControl">
+        </mat-form-field>
+    
+        <span>
+            <button mat-raised-button color="primary" (click)="updateTeam()">Update</button>
+        </span>
+    </mat-card>
+
+    <mat-card class=" div-flex" >
+        <mat-card-title>Játékos törlése a csapatból</mat-card-title>
+        <mat-card-subtitle>
+            A játékos törlése a csapatból akkor lesz sikeres, <br> ha a játékos a kiválasztott csapatban játszik.
+        </mat-card-subtitle>
+
+        <mat-form-field>
+            <mat-label>Csapatok</mat-label>
+            <mat-select matNativeControl [(value)]="selectedTeamIdToPlayers">
+                <mat-option *ngFor="let team of teams" [value]="team.id">{{ team.team_name }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-card-subtitle>You selected teamId: {{selectedTeamId}}</mat-card-subtitle>
+    
+        <mat-form-field>
+            <mat-label>Játékosok</mat-label>
+            <mat-select matNativeControl [(value)]="selectedPlayerIdToDelete">
+                <mat-option *ngFor="let player of players" [value]="player.id">{{ player.username }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        
+        <mat-card-subtitle>You selected playerId: {{selectedPlayerIdToDelete}}</mat-card-subtitle>
+        <span>
+            <button mat-raised-button color="primary" (click)="deletePlayerFromTeam()">Delete</button>
+        </span>
+    </mat-card>
+    
+    
+    
+    
+</div>

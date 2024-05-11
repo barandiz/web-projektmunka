@@ -1,0 +1,42 @@
+.div-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}
+
+mat-card {
+    width: 80%;
+    height: 60%;
+    align-self: center;
+}
+
+mat-card-header {
+    //alapból flex lenne, így lesz középen
+    display: initial;
+    padding: 2rem;
+    margin-bottom: 4rem;
+    
+}
+
+mat-card-title{
+    font-size: 30px;
+}
+
+h3{
+    font-size: 20px;
+}
+
+h3 span{
+    font-weight: 500;
+}
+
+.main_component {
+    height: 100vh;
+}
+
+p{
+    padding: 1rem;
+}
+
